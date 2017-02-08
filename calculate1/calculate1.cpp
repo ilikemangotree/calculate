@@ -6,7 +6,7 @@ using namespace std;
 void calculate1::A1()
 {
 	int d1,d2,d3,d4,c1,c2,c3,i,j;            //d1´ú±íµÚÒ»¸öÊı×Ö£¬c1´ú±íµÚÒ»¸ö·ûºÅ£¬ÒÔ´ËÀàÍÆ 
-	srand((unsigned)time(NULL));             //Õâ¸öÊÇËæ»úº¯ÊıµÄ¹Ø¼ü 
+
 	d1=rand()%10+1;                      //1~10µÄËæ»úÊı 
 	d2=rand()%10+1;
 	d3=rand()%10+1;
@@ -31,7 +31,7 @@ void calculate1::A1()
 void calculate1::B1()
 {
 	int d1,d2,d3,d4,c1,c2,c3,i,j;            //d1´ú±íµÚÒ»¸öÊı×Ö£¬c1´ú±íµÚÒ»¸ö·ûºÅ£¬ÒÔ´ËÀàÍÆ 
-	srand((unsigned)time(NULL));             //Õâ¸öÊÇËæ»úº¯ÊıµÄ¹Ø¼ü 
+
 	d1=rand()%10+1;                      //1~10µÄËæ»úÊı 
 	d2=rand()%10+1;
 	d3=rand()%10+1;
@@ -56,7 +56,7 @@ void calculate1::B1()
 void calculate1::B3()
 {
 int d1,d2,d3,d4,c1,c2,c3,i,j;            //d1´ú±íµÚÒ»¸öÊı×Ö£¬c1´ú±íµÚÒ»¸ö·ûºÅ£¬ÒÔ´ËÀàÍÆ 
-    srand((unsigned)time(NULL));             //Õâ¸öÊÇËæ»úº¯ÊıµÄ¹Ø¼ü 
+
 	d1=rand()%10+1;                      //1~10µÄËæ»úÊı 
 	d2=rand()%10+1;
 	d3=rand()%10+1;
@@ -81,7 +81,7 @@ int d1,d2,d3,d4,c1,c2,c3,i,j;            //d1´ú±íµÚÒ»¸öÊı×Ö£¬c1´ú±íµÚÒ»¸ö·ûºÅ£¬Ò
 void calculate1::C1()
 {
 	int d1,d2,d3,d4,c1,c2,c3,i,j;            //d1´ú±íµÚÒ»¸öÊı×Ö£¬c1´ú±íµÚÒ»¸ö·ûºÅ£¬ÒÔ´ËÀàÍÆ 
-	srand((unsigned)time(NULL));             //Õâ¸öÊÇËæ»úº¯ÊıµÄ¹Ø¼ü 
+
 	d1=rand()%10+1;                      //1~10µÄËæ»úÊı 
 	d2=rand()%10+1;
 	d3=rand()%10+1;

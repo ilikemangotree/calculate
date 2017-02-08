@@ -12,7 +12,7 @@ int main()
 	for(i=0;i<N;i++)
 	{
 	
-	    srand((unsigned)time(NULL));
+
 	    k=rand()%4; 
 	    switch(k)
 	    {
