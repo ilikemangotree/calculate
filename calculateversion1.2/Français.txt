@@ -1,0 +1,4 @@
+﻿S'il vous plaît entrer le numéro du titre que vous souhaitez (vous pouvez entrer 'q' à la fin de ce programme):
+S'il vous plaît entrer votre réponse:
+La bonne réponse à la question numéro:
+Bienvenue à utiliser ce logiciel! ! !

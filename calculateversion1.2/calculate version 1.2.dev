@@ -1,6 +1,6 @@
 [Project]
-FileName=calculate.dev
-Name=calculate
+FileName=calculate version 1.2.dev
+Name=calculate version 1.2
 Type=1
 Ver=2
 ObjFiles=
@@ -28,8 +28,8 @@ Folders=
 IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
-CompilerSettings=0000000000000000000000000
-UnitCount=3
+CompilerSettings=0000000000000000001000000
+UnitCount=5
 
 [VersionInfo]
 Major=1
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=hhh.cpp
+FileName=main 1.2.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -61,7 +61,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit2]
-FileName=calculate.h
+FileName=calculateversion12.h
 CompileCpp=1
 Folder=
 Compile=1
@@ -71,7 +71,27 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=calculate.cpp
+FileName=calculateversion12.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit4]
+FileName=language.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit5]
+FileName=language.cpp
 CompileCpp=1
 Folder=
 Compile=1
