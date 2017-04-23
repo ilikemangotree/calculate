@@ -1,4 +1,3 @@
 ﻿Bitte geben Sie die Nummer des Titels, die Sie wollen (können Sie "q" bis zum Ende dieses Programms eingeben):
-Bitte geben Sie Ihre Antwort:
 Die richtige Antwort auf Frage Nummer:
 Willkommen zur Nutzung dieser Software! ! !

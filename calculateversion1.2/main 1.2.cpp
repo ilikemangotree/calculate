@@ -13,23 +13,23 @@ using namespace std;
 int main()
 
 {
-	calculateversion2 cal;
+	calculateversion2 cal;///////////// 
 	
-	language lan;
+	language lan;//////////////// 
 
     srand(unsigned(time(0)));
 
-    int count,i,j,n1,n2,exchange,t=0,f,temp2;
+    int count,i,j,n1,n2,exchange,t=0,f,temp2;/////////////// 
     
-    char boundary[20][200];
+    char boundary[20][200];/////////// 
 
-    char location[100]=""; 
+    char location[100]=""; ////////////// 
 
-    string str_n1,str_n2,temp;
+    string str_n1,str_n2,temp;/////////// 
 
-    char symbol,end;
+    char symbol,end;/////////// 
 
-    char languagein[50];
+    char languagein[50];///////// 
     
     lan.languagelist();
     
@@ -38,43 +38,39 @@ int main()
 
     cin>>count;
 
-    string equation[count];
+    string equation[10000];///////// 
 
-    float *answer = new float[count];
+    float *answer = new float[10000];////////// 
 
-    float *input = new float[count];
+    float *input = new float[10000];/////////// 
 
     for (i = 0; i < count; i++)
 
     {
 
-        n1=rand()%11;
+        n1=rand()%10+1;   //随机数字 
 
-        n2=rand()%11;
+        n2=rand()%10+1;   //随机数字 
 
-        symbol=cal.creat_symbol();
+        symbol=cal.creat_symbol();  //随机生成字符 
 
-        str_n1=cal.int_str(n1);
+        str_n1=cal.int_str(n1);    //将数字转换为字符串 
 
-        str_n2=cal.int_str(n2);
+        str_n2=cal.int_str(n2);    //将数字转换为字符串 
 
-        equation[i]=cal.connect(str_n1,str_n2,symbol);
+        equation[i]=cal.connect(str_n1,str_n2,symbol);     //连接数字和符号形成方程式 
 
         for (j = 0; j < 2; j++)
 
-        {           
+        {            
 
-            str_n1=equation[i];
-
-            str_n1=cal.bracket(equation[i]);
+            str_n1=cal.bracket(equation[i]);   // 每2个数字和一个符号就随机在两端加一个括号 
 
             n2=rand()%11;
 
-            str_n2=cal.int_str(n2);
+            str_n2=cal.int_str(n2);       
 
-            // 对字符串位置进行随机交换
-
-            exchange=rand()%2;
+            exchange=rand()%2;     // 对字符串位置进行随机交换
 
             if (exchange==1)
 
@@ -90,15 +86,15 @@ int main()
 
             symbol=cal.creat_symbol();
 
-            equation[i]=cal.connect(str_n1,str_n2,symbol);
+            equation[i]=cal.connect(str_n1,str_n2,symbol);  //将新生成的数字与字符连接上原来的字符串上 
 
         }
 
-        cout<<"("<<i+1<<"):"<<equation[i]<<'=';
+        cout<<"("<<i+1<<"):"<<equation[i]<<'=';      //生成运算式 
 
-        cin>>input[i];
+        cin>>input[i];                           //用户输入答案 
 
-        answer[i]=cal.expressionCalculate(equation[i]);
+        answer[i]=cal.expressionCalculate(equation[i]);    
 
         //四舍五入保留两位小数
 

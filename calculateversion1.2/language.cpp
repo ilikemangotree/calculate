@@ -7,7 +7,7 @@
 #include <stack>
 #include <map> 
 #include <fstream>
-void language::languagelist()
+void language::languagelist()       //显示语言列表 
 {
 	fstream file;
 	file.open("languagelist.txt");
@@ -18,13 +18,13 @@ void language::languagelist()
 	}
 	file.close();
 }
-void language::languagechoice(char boundary[][200])
+void language::languagechoice(char boundary[][200])  //用户输入的语言将决定界面的语言 
 {
 	char path[100]="",choice[100];
 	int i;
 	for(i=0;;i++)
 	{
-		cin>>choice;
+		cin>>choice;          
 		strcat(path,choice);
 		strcat(path,".txt");
 		fstream file;
@@ -43,7 +43,11 @@ void language::languagechoice(char boundary[][200])
     	}
 
     	else
+    	{ 
 	   		cout<<"Sorry,your choice has not been prepared,please choice again!"<<endl;
+	   		memset(choice,'\0',100); 
+	   		memset(path,'\0',100);
+	   	}
 	}
 }
 

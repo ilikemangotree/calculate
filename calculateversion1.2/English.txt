@@ -1,4 +1,3 @@
 Please enter the number of questions you want (you can type 'q' to end this program):
-Please enter your answer:
 Answer the correct question number:
 Welcome to the software!

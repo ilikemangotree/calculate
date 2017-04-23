@@ -11,8 +11,8 @@
 class language
 {
 	public:
-		void languagelist();
-		void languagechoice(char boundadry[][200]);
+		void languagelist();   //显示语言列表  
+		void languagechoice(char boundadry[][200]);  //用户输入语言决定界面的语言 
 		
 		
 	protected:
