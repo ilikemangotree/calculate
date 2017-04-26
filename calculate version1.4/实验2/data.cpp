@@ -10,7 +10,7 @@ using namespace std;
 int Data::randomNumber()		//用于随机生成数字
 {
 	int n;
-	n = rand() % (2)+1 ;
+	n = rand() % 10+1 ;
 	return n;
 }
 char Data::randomOperation()	//用于随机生成运算符
