@@ -1,0 +1,7 @@
+﻿  main.cpp
+c:\users\ne\desktop\calculate1.4\calculate1.4\main.cpp(73): warning C4101: “lan”: 未引用的局部变量
+  正在生成代码...
+  正在跳过...(未检测到相关更改)
+  File.cpp
+  calculate1.4.vcxproj -> C:\Users\NE\Desktop\calculate1.4\Debug\calculate1.4.exe
+  calculate1.4.vcxproj -> C:\Users\NE\Desktop\calculate1.4\Debug\calculate1.4.pdb (Full PDB)
