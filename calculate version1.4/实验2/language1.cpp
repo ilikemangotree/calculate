@@ -53,8 +53,7 @@ void language::languagechoice(char boundadry[20][200])		//用户选择语言
 void language::result(int t,char boundadry[20][200])   //显示用户答对题目个数
 
 {
-	cout << boundadry[1] << t << endl;
-	cout << boundadry[2] << endl;
+	cout << boundadry[2] << t << endl;
 
 }
 

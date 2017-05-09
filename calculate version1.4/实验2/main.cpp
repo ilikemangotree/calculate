@@ -46,7 +46,7 @@ string generateExpression(int i)		//用于生成运算式
 		sign = dat.randomOperation();
 		equation = dat.connect(str_n1, str_n2, sign);  //把那2个数字和1个符号看做旧的的字符串，将新生成的数字与字符连接上旧的的字符串上
 	}
-	cout << "(" << i << "):" << equation << '=';      //生成运算式 
+	cout << "(" << i << "):" << equation << '=';       //生成运算式 
 	return equation;
 }
 int calculateResult(string n)	//用于计算生成的运算式的结果()
@@ -72,7 +72,7 @@ int print(int n,int i,string answer,int rightanswer)	//将统计结果输出给用户
 		lan.result(t,boundadry);		//显示结果
 	return i;
 }
-int main()
+int main(int argc, char *argv[])
 {
 	srand((unsigned)time(NULL));
 	int i;
