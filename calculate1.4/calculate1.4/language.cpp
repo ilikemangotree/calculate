@@ -11,7 +11,6 @@ void language::languagelist(char boundadry[20][200])   //语言列表
 {
 	fstream file;
 	file.open("languagelist.txt");
-	char line[100] = "";
 	while (file.getline(line, 100))
 	{
 		cout << line << endl;
@@ -20,7 +19,7 @@ void language::languagelist(char boundadry[20][200])   //语言列表
 }
 void language::languagechoice(char boundadry[20][200])		//用户选择语言
 {
-	char path[100] = "", choice[100];
+	char choice[100];
 	int i;
 	for (i = 0;; i++)
 	{ 
@@ -48,12 +47,6 @@ void language::languagechoice(char boundadry[20][200])		//用户选择语言
 			memset(path, '\0', 100);
 		}
 	}
-}
-void language::result(int t,char boundadry[20][200])   //显示用户答对题目个数
-
-{
-	cout << boundadry[3] << t << endl;
-
 }
 
 

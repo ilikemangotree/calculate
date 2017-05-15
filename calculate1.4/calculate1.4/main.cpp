@@ -13,7 +13,18 @@
 using namespace std;
 char boundadry[20][200];
 int n;
-int readFile(char *p)//读取用户要求的题目数量(请注意参数设置)
+void writefile(char *path,string equ, string answer, int rightanswer, char *boundadry)//将最终结果写入文件，写入内容包括：用户输入的题目数，每个生成的表达式、正确答案、用户输入的答案，保存到命令行中第二个参数指定的路径。
+
+{
+	File f;
+	f.outputfile(path, equ, answer, rightanswer,boundadry);
+}
+void writefile(char *path, char *boundadry, int n)//writefile函数的重载
+{
+	File f;
+	f.outputfile(path, boundadry, n);
+}
+int readFile(char *p)//读取用户要求的题目数量
 {
 	File f;
 	n=f.inputcount(p);
@@ -86,29 +97,24 @@ int main(int argc, char *argv[])
 	scan();		//该函数用于与用户交互，获取输入数据
 	cout << boundadry[0]<< n << endl;
 	cout << "========================" << endl << endl;
-	file << boundadry[0] << n << endl;
-	file << "========================" << endl << endl;
+	writefile(argv[2], boundadry[0], n);
 	int t; 
 	for (i = 0; i < n; i++)
 	{
-		string equation = generateExpression(i + 1,"out.txt");
+		string equation = generateExpression(i + 1,argv[2]);
 		file << equation << endl;       //生成运算式 
-		file << boundadry[1];
 		int rightanswer = calculateResult(equation);//用于计算生成的运算式的结果
 		string answer;
 		cin >> answer;		//用户输入答案
-		file << answer << endl;;
 		if (answer == "q")		//如果用户输入q键则结束程序并且输出答对题目的个数
 			break;
 		t=print(n,i,answer, rightanswer);		//将统计结果输出给用户
 		cout << boundadry[2] << rightanswer << endl;
 		cout << "========================" << endl << endl;
-		file << boundadry[2] << rightanswer << endl;
-		file << "========================" << endl << endl;
+		writefile(argv[2], equation, answer, rightanswer, boundadry[2]);
 	}
 	cout << boundadry[3] << t << endl;
 	cout << boundadry[4] << endl;
-	file << boundadry[3] << t << endl;
-	file << boundadry[4] << endl;
+	file.close();
 	return 0;
 }

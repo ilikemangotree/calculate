@@ -9,32 +9,30 @@
 using namespace std;
 int Data::randomNumber()		//用于随机生成数字
 {
-	int n;
-	n = rand() % 10+1 ;
-	return n;
+	random = rand() % 10+1 ;
+	return random;
 }
 char Data::randomOperation()	//用于随机生成运算符
 {
-	int n = rand() % 4;
-	char sym;
-	switch (n)
+	random = rand() % 4;
+	switch (random)
 	{
-	case 0: sym = '+'; break;
-	case 1: sym = '-'; break;
-	case 2: sym = '*'; break;
-	case 3: sym = '/'; break;
+	case 0: randomsym = '+'; break;
+	case 1: randomsym = '-'; break;
+	case 2: randomsym = '*'; break;
+	case 3: randomsym = '/'; break;
 	}
-	return sym;
+	return randomsym;
 }
-string Data::bracket(string n)   // 随机括号
+string Data::bracket(string str)   // 随机括号
 
 {
-	int random = rand() % 2;
+	random = rand() % 2;
 	if (random == 1)
 	{
-		n = '(' + n + ')';
+		str = '(' + str + ')';
 	}
-	return n;
+	return str;
 
 }
 
@@ -55,7 +53,7 @@ string Data::connect(string str1, string str2, char a)   // 连接数字运算符
 
 {
 
-	string equ = str1 + a + str2;
+	equ = str1 + a + str2;
 
 	return equ;
 
@@ -73,16 +71,6 @@ string Data::InfixToPostfix(string infix)   // 将中缀表达式转换成后缀表达式
 
 	char current = 0;
 
-	string postfix;//后缀表达式
-
-
-
-	stack<char> mark;//符号栈
-
-
-
-	map<char, int> priority;//符号优先级
-
 	priority['+'] = 0;
 
 	priority['-'] = 0;
@@ -90,8 +78,6 @@ string Data::InfixToPostfix(string infix)   // 将中缀表达式转换成后缀表达式
 	priority['*'] = 1;
 
 	priority['/'] = 1;
-
-
 
 	for (int i = 0; i < infix.size(); ++i)
 
@@ -215,13 +201,9 @@ int Data::posfixCompute(string s)   // 计算后缀表达式
 
 {
 
-	stack<int> tempResult;
-
 	string strNum;
 
 	int currNum = 0;
-
-
 
 	int tempNum = 0;
 
@@ -322,10 +304,9 @@ int Data::record(int answer, int rightanswer)    //记录正确题数
 
 {
 
-	int t = 0;
 
-	if (answer == rightanswer) t++;
+	if (answer == rightanswer) rightcount++;
 
-	return t;
+	return rightcount;
 
 }

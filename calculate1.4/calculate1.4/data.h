@@ -12,6 +12,14 @@ using namespace std;
 class Data
 {
 private:
+	int random;			//代表随机数,可用于生成算式中的数字，也用于随机字符和随机括号
+	char randomsym;		//代表随机字符
+	string equ;			//生成的算式
+	string postfix;		//后缀表达式
+	stack<char> mark;	//符号栈
+	map<char, int> priority;		//符号优先级
+	stack<int> tempResult;			//计算后缀表达式的栈
+	int rightcount=0;      //记录回答正确的个数题数
 
 public:
 	int randomNumber();				//用于随机生成数字;
