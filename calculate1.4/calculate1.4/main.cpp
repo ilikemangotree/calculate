@@ -10,6 +10,7 @@
 #include "data.h"
 #include "language.h"
 #include "File.h"
+#include "Random.h"
 using namespace std;
 char boundadry[20][200];
 int n;
@@ -38,12 +39,15 @@ void scan()		//该函数用于与用户交互，获取输入数据
 }
 string generateExpression(int i,char *p)		//用于生成运算式
 {
+	RandomFactory ranfactory;			//创建工厂
+	Random *ranp = ranfactory.randomrandom("rannum");//选择产生随机数
 	int n1, n2;
-	Data dat;
-	n1 = dat.randomNumber();	//随机数字
-	n2 = dat.randomNumber();	//随机数字
+	n1 = ranp->random();
+	n2 = ranp->random();
+	ranp = ranfactory.randomrandom("ranope");//选择产生随机字符
 	char sign;
-	sign = dat.randomOperation();	//随机生成字符 
+	sign = ranp->random();
+	Data dat;
 	string str_n1, str_n2, temp;
 	str_n1 = dat.int_str(n1);	//将数字转换为字符串 
 	str_n2 = dat.int_str(n2);	//将数字转换为字符串 
@@ -62,7 +66,7 @@ string generateExpression(int i,char *p)		//用于生成运算式
 			str_n1 = str_n2;
 			str_n2 = temp;
 		}
-		sign = dat.randomOperation();
+		sign = ranp->random();
 		equation = dat.connect(str_n1, str_n2, sign);  //把那2个数字和1个符号看做旧的的字符串，将新生成的数字与字符连接上旧的的字符串上
 	}
 	string str_i;

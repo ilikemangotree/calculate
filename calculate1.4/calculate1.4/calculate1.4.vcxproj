@@ -23,11 +23,13 @@
     <ClCompile Include="File.cpp" />
     <ClCompile Include="language.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Random.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="data.h" />
     <ClInclude Include="language.h" />
     <ClInclude Include="File.h" />
+    <ClInclude Include="Random.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{1B327295-B39C-4E26-9A75-A2D5695C4587}</ProjectGuid>

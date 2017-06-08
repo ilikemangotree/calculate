@@ -8,6 +8,7 @@
 #include <fstream>
 #include "data.h"
 #include "language.h"
+#include "Random.h"
 using namespace std;
 char boundadry[20][200];
 int n;
@@ -19,13 +20,16 @@ void scan()		//该函数用于与用户交互，获取输入数据
 }
 string generateExpression(int i)		//用于生成运算式
 {
+	RandomFactory ranfactory;
+	Random *ranp = ranfactory.randomrandom("rannum");
 	int n1, n2;
-	Data dat;
-	n1 = dat.randomNumber();	//随机数字
-	n2 = dat.randomNumber();	//随机数字
+	n1 = ranp->random();
+	n2 = ranp->random();
+	ranp = ranfactory.randomrandom("ranope");
 	char sign;
-	sign = dat.randomOperation();	//随机生成字符 
+	sign = ranp->random();
 	string str_n1, str_n2, temp;
+	Data dat;
 	str_n1 = dat.int_str(n1);	//将数字转换为字符串 
 	str_n2 = dat.int_str(n2);	//将数字转换为字符串 
 	string equation;

@@ -1,3 +1,4 @@
-﻿  File.cpp
-  calculate1.4.vcxproj -> C:\Users\NE\Desktop\calculate1.4\Debug\calculate1.4.exe
-  calculate1.4.vcxproj -> C:\Users\NE\Desktop\calculate1.4\Debug\calculate1.4.pdb (Full PDB)
+﻿  main.cpp
+c:\users\ne\documents\github\calculate\calculate1.4\calculate1.4\random.h(38): warning C4715: “RandomFactory::randomrandom”: 不是所有的控件路径都返回值
+  calculate1.4.vcxproj -> C:\Users\NE\Documents\GitHub\calculate\calculate1.4\Debug\calculate1.4.exe
+  calculate1.4.vcxproj -> C:\Users\NE\Documents\GitHub\calculate\calculate1.4\Debug\calculate1.4.pdb (Full PDB)

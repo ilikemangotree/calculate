@@ -22,8 +22,6 @@ private:
 	int rightcount=0;      //记录回答正确的个数题数
 
 public:
-	int randomNumber();				//用于随机生成数字;
-	char randomOperation();			//用于随机生成运算符
 	string bracket(string n);    //随机生成括号 
 	string int_str(int number); //将数字转换为字符串 
 	string connect(string str1, string str2, char a);  //将数字与符号连接 

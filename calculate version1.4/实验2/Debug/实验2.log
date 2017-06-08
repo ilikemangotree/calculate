@@ -1,4 +1,7 @@
 ﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (实验2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   main.cpp
+  Random.cpp
+  正在生成代码...
+c:\users\ne\documents\github\calculate\calculate version1.4\实验2\random.h(37): warning C4715: “RandomFactory::randomrandom”: 不是所有的控件路径都返回值
   实验2.vcxproj -> C:\Users\NE\Documents\GitHub\calculate\calculate version1.4\Debug\calculate version1.4.exe
   实验2.vcxproj -> C:\Users\NE\Documents\GitHub\calculate\calculate version1.4\Debug\calculate version1.4.pdb (Full PDB)

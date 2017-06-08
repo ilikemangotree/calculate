@@ -7,23 +7,6 @@
 #include <iostream>
 #include "data.h"
 using namespace std;
-int Data::randomNumber()		//用于随机生成数字
-{
-	random = rand() % 10+1 ;
-	return random;
-}
-char Data::randomOperation()	//用于随机生成运算符
-{
-	random = rand() % 4;
-	switch (random)
-	{
-	case 0: randomsym = '+'; break;
-	case 1: randomsym = '-'; break;
-	case 2: randomsym = '*'; break;
-	case 3: randomsym = '/'; break;
-	}
-	return randomsym;
-}
 string Data::bracket(string str)   // 随机括号
 
 {
